@@ -28,6 +28,9 @@
 VR 眼镜、金色奖杯、爱心涟漪、知识书本、打开的信封。
 联系页二维码指向示例资料中的学校个人主页。
 
+首页就绪后，后台播放一次 2.2 秒的原创合唱式开机音效，codec 音量为 55%；结束后挂起
+音频 codec。音频硬件不可用时静默跳过，不影响护照页面和按键。
+
 | 按键 | 操作 |
 | --- | --- |
 | UP / DOWN | 上一个／下一个章节，循环切换 |
@@ -89,6 +92,7 @@ python -m pip install -r requirements.txt
 | 章节标题、配色 | [main/passport_ui.c](main/passport_ui.c) 中的 `THEMES` |
 | 感谢语 | 同文件 `passport_ui_celebrate()` 中的 `messages` |
 | 章节插画和逐帧动作 | [main/passport_art.c](main/passport_art.c) |
+| 开机旋律／音量／关闭播放 | [data/startup-score.json](data/startup-score.json)／[main/startup_sound.c](main/startup_sound.c) 中的 `STARTUP_VOLUME`／移除 `app_main()` 中的 `startup_sound_start()` 调用 |
 | 按键行为和页面顺序 | [main/main.c](main/main.c)、[main/passport_nav.h](main/passport_nav.h)、[main/passport_nav.c](main/passport_nav.c) |
 | 板卡接线和可复用硬件逻辑 | [components/bsp](components/bsp)，从 `include/bsp_pins.h` 开始 |
 
@@ -97,6 +101,11 @@ python -m pip install -r requirements.txt
 ```bash
 python tools/regenerate.py
 ```
+
+音效生成器也会导出可编辑的 [MIDI](assets/music/startup.mid) 和
+[WAV 试听](assets/music/startup.wav)。MIDI 选择 GM Voice Oohs 合唱音色；
+设备播放的是自制合唱式合成音频，不内置 General MIDI 引擎，外部 MIDI 播放器的
+音色可能不同。修改音符后运行 `python tools/gen_startup_sound.py`，或使用上述完整生成命令。
 
 换成自己的头像：
 

@@ -3,6 +3,7 @@ idf_component_register(
          "passport_nav.c"
          "passport_art.c"
          "passport_ui.c"
+         "startup_sound.c"
     INCLUDE_DIRS "."
     REQUIRES bsp bt esp_event esp_hw_support esp_timer esp_netif nvs_flash
 )

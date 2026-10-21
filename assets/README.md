@@ -59,6 +59,21 @@ the eight animated pages together as `build/preview-v3/sections.gif`.
 
 Store reusable music and sound-effect sources in `music/`.
 
+`music/startup.mid` and `music/startup.wav`: **A Little Wonder for Azmi**, an
+original ascending C-major/add9 choir-like cue created for this gift, distributed
+under this repository's MIT license. No recordings, samples or soundfonts are
+used. Edit `data/startup-score.json` and run `python tools/gen_startup_sound.py`.
+The MIDI is type 0, 480 PPQN, 120 BPM, GM Voice Oohs (program 53, zero-based).
+The WAV is 2.2 s, 16 kHz, 16-bit mono, peak -9 dBFS, with soft attacks/releases,
+detuned harmonic voices and two quiet reflections. External MIDI instruments
+need not match this custom synthesis. The same PCM is embedded in
+`main/startup_sound_data.h` (70,400 Flash bytes); playback copies 256-sample
+chunks (512 RAM bytes) in a 3 KB one-shot task. The BSP additionally retains its
+I2S channels/DMA; codec ADC/DAC and I2S are suspended after playback, and the
+task stack is reclaimed. No microphone samples are read or stored. Listen on
+the real speaker to check volume, timbre and crackles; host checks cannot prove
+acoustic quality. The default codec output volume is 55%, not a calibrated SPL.
+
 - Document the source, license, sample rate, bit depth, channels, conversion command, and destination.
 - Prefer 16 kHz, 16-bit mono PCM when it matches the current BSP audio path.
 - Check Flash and internal-RAM cost before embedding audio; stream or chunk long recordings.

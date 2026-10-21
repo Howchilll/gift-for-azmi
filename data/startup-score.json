@@ -1,0 +1,16 @@
+{
+  "title": "A Little Wonder for Azmi",
+  "sample_rate": 16000,
+  "duration_ms": 2200,
+  "program": 53,
+  "notes": [
+    {"midi": 72, "start_ms": 80, "duration_ms": 300, "velocity": 76},
+    {"midi": 76, "start_ms": 220, "duration_ms": 340, "velocity": 80},
+    {"midi": 79, "start_ms": 360, "duration_ms": 380, "velocity": 84},
+    {"midi": 84, "start_ms": 520, "duration_ms": 420, "velocity": 86},
+    {"midi": 72, "start_ms": 740, "duration_ms": 900, "velocity": 65},
+    {"midi": 76, "start_ms": 740, "duration_ms": 900, "velocity": 65},
+    {"midi": 79, "start_ms": 740, "duration_ms": 900, "velocity": 65},
+    {"midi": 86, "start_ms": 740, "duration_ms": 900, "velocity": 62}
+  ]
+}

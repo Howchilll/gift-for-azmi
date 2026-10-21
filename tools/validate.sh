@@ -36,6 +36,9 @@ run_static_checks() {
         tests/test_passport_nav.c main/passport_nav.c \
         -o "${test_dir}/test_passport_nav"
     "${test_dir}/test_passport_nav"
+    "${CC:-cc}" -std=c11 -Wall -Wextra -Werror -Itests/demo_stubs -Imain \
+        tests/test_startup_sound.c -o "${test_dir}/test_startup_sound"
+    "${test_dir}/test_startup_sound"
     "${CC:-cc}" -std=c11 -Wall -Wextra -Werror -Imain \
         tests/test_key_guard.c -o "${test_dir}/test_key_guard"
     "${test_dir}/test_key_guard"
@@ -71,6 +74,7 @@ run_static_checks() {
     PYTHONDONTWRITEBYTECODE=1 python3 tests/test_deep_sleep_contract.py
     PYTHONDONTWRITEBYTECODE=1 python3 tests/test_key_wake_contract.py
     PYTHONDONTWRITEBYTECODE=1 python3 tests/test_regenerate.py
+    PYTHONDONTWRITEBYTECODE=1 python3 tests/test_startup_asset.py
     PYTHONDONTWRITEBYTECODE=1 python3 tests/test_check_repo.py
     PYTHONDONTWRITEBYTECODE=1 python3 tests/test_verify_firmware.py
     PYTHONDONTWRITEBYTECODE=1 python3 tests/test_archive_firmware.py

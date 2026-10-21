@@ -16,6 +16,7 @@
 #include "lvgl.h"
 #include "passport_nav.h"
 #include "passport_ui.h"
+#include "startup_sound.h"
 
 #include "esp_log.h"
 #include "esp_sleep.h"
@@ -178,4 +179,8 @@ void app_main(void) {
     }
 
     ESP_LOGI(TAG, "就绪:卡通头像首页,UP/DOWN 翻页,OK 切换子页或庆祝");
+    const esp_err_t sound_err = startup_sound_start();
+    if (sound_err != ESP_OK) {
+        ESP_LOGW(TAG, "Startup cue unavailable: %s", esp_err_to_name(sound_err));
+    }
 }

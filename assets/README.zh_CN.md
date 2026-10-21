@@ -55,6 +55,18 @@ LVGL Managed Component。运行 `python tools/simulate.py` 检查全部 20 个�
 
 可复用的音乐与音效源码放在 `music/`。
 
+`music/startup.mid` 和 `music/startup.wav`：**A Little Wonder for Azmi**，为礼物
+原创的 C 大调／add9 上行合唱式短音效，按本仓库 MIT 许可证分发；没有使用录音、
+采样或音色库。编辑 `data/startup-score.json` 后运行 `python tools/gen_startup_sound.py`。
+MIDI 为 type 0、480 PPQN、120 BPM，使用 GM Voice Oohs（从零计数的 program 53）。
+WAV 为 2.2 秒、16 kHz、16 位单声道，峰值约 -9 dBFS，带柔和起落、轻微失谐的
+谐波声部及两次轻混响。外部 MIDI 乐器不一定与这套自制合成音色一致。
+相同 PCM 嵌入 `main/startup_sound_data.h`（70,400 字节 Flash）；3 KB 的一次性任务
+以 256 个采样（512 字节 RAM）分块播放。BSP 另保留 I2S 通道及 DMA；播放后挂起
+codec ADC/DAC 和 I2S，任务栈自动回收。不读取或保存麦克风采样。音量、音色和
+爆音需真机扬声器试听确认，主机测试不能证明听感；默认 codec 音量为 55%，不是
+经过校准的声压级。
+
 - 记录来源、许可、采样率、位深、声道、转换命令与目标路径。
 - 与当前 BSP 音频路径匹配时优先采用 16 kHz、16 位单声道 PCM。
 - 嵌入音频前评估 Flash 与内部 RAM 成本；长录音应流式或分块。

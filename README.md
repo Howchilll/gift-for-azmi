@@ -32,6 +32,10 @@ and animated illustration: a smiling sun, explorer card, winding route, VR
 goggles, gold cup, heart ripples, a book with an idea, and an opening envelope.
 The contact QR links to the included university profile URL.
 
+After the home screen is ready, a 2.2-second original choir-like startup cue
+plays once at 55% codec volume. It runs in the background, then suspends the
+codec; an unavailable audio device does not block the passport.
+
 | Button | Action |
 | --- | --- |
 | UP / DOWN | Previous / next chapter; wraps around |
@@ -96,6 +100,7 @@ python -m pip install -r requirements.txt
 | Chapter headings and colors | `THEMES` in [main/passport_ui.c](main/passport_ui.c) |
 | Thank-you messages | `messages` in `passport_ui_celebrate()` in the same file |
 | Chapter illustrations and frame movements | [main/passport_art.c](main/passport_art.c) |
+| Startup melody / volume / disabling playback | [data/startup-score.json](data/startup-score.json) / `STARTUP_VOLUME` in [main/startup_sound.c](main/startup_sound.c) / remove `startup_sound_start()` from `app_main()` |
 | Button behavior and page order | [main/main.c](main/main.c), [main/passport_nav.h](main/passport_nav.h) and [main/passport_nav.c](main/passport_nav.c) |
 | Board wiring and reusable hardware behavior | [components/bsp](components/bsp), starting with `include/bsp_pins.h` |
 
@@ -104,6 +109,12 @@ After editing the JSON, regenerate all embedded resources:
 ```bash
 python tools/regenerate.py
 ```
+
+The sound generator also exports an editable [MIDI](assets/music/startup.mid)
+and a [WAV preview](assets/music/startup.wav). The MIDI selects GM Voice Oohs;
+the device uses our own pre-rendered choir-like synthesis, not a General MIDI
+engine. External MIDI players can sound different. After changing the score,
+run `python tools/gen_startup_sound.py` (or the full regeneration command).
 
 To use your own portrait:
 

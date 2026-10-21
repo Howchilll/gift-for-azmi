@@ -60,7 +60,7 @@ def main():
         parser.error(str(error))
     if args.avatar and not args.avatar.is_file():
         parser.error(f"Avatar does not exist: {args.avatar}")
-    for name in ("gen_qr.py", "gen_profile.py", "gen_avatar.py"):
+    for name in ("gen_qr.py", "gen_profile.py", "gen_avatar.py", "gen_startup_sound.py"):
         command = [sys.executable, str(ROOT / "tools" / name)]
         if name == "gen_avatar.py" and args.avatar:
             command.append(str(args.avatar.resolve()))
