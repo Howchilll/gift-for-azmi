@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional QR decoder for tools/verify_qr.py.
+opencv-python==5.0.0.93

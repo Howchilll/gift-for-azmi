@@ -1,0 +1,6 @@
+Tool: built-in imagegen (not CLI/API fallback).
+Date: 2026-10-21
+Reference/edit target: a photo supplied during creation of this gift (not distributed).
+Final asset: assets/images/azmi-cartoon-v2.png
+
+Use case: style-transfer. Edit target: this real photograph. Draw the SAME recognizable mature Malaysian male lecturer as a CLEARLY CARTOON 2D character portrait for a student's affectionate gift. Warm medium-brown NATURAL skin, receding short grey hair, long oval face, grey-brown blazer and pale blue shirt. Warm HAPPY smile, kind crescent smile lines and expressive dark eyes. Preserve age and distinctive face proportions. Simple bold clean ink outlines, flat appealing color shapes with only two or three gentle shading tones, polished friendly animated-film character illustration, slightly rounded cartoon proportions, illustrated not photorealistic. NO photographic skin texture or pores, NO sepia or orange filter, NO dark heavy eye shadows. Square centered bust portrait, whole head and shoulders visible, generous 8 percent margin above the head, solid cream #FFF8ED background. Dignified playful mentor, recognizable not generic, no glasses, no props, no text or watermark. Must read well at 144x144 pixels. Make the cartoonization obvious.

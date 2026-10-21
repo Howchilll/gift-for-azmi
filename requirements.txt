@@ -1,0 +1,3 @@
+# Host-side editable-asset generators; not needed by the firmware at runtime.
+Pillow==12.0.0
+qrcode==8.2

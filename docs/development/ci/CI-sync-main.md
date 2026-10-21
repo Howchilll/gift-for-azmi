@@ -1,0 +1,24 @@
+<p align="right">
+  <a href="CI-sync-main.zh_CN.md">简体中文</a> · <strong>English</strong>
+</p>
+
+# Upstream Synchronization
+
+In this gift repository, `.github/workflows/sync-main.yml` is deliberately
+disabled by default: its schedule is removed, and the job requires both a fork
+and an explicit repository variable `ENABLE_UPSTREAM_SYNC=true`. This standalone
+repository does not enable that variable. The product
+branch contains the gift application and must not be replaced with the upstream
+hardware-test demo. The remaining text describes the inherited upstream design
+for reference, not an enabled synchronization task.
+
+The workflow checks out the target `main` without persisting credentials and uses the full-SHA-pinned upstream-sync Action. Its generated `GITHUB_TOKEN` has only `contents: write`; no manually configured token is required. If synchronization fails after an upstream workflow change, use GitHub's **Sync fork** once and inspect the Actions log.
+
+Keep fork-specific firmware and documentation on feature branches so `main` stays synchronized. If development must happen directly on `main`, disable this workflow first to avoid automatic merges or conflicts. Fork owners must explicitly enable Actions after forking.
+
+The checkout explicitly sets `ref: main`, even when a manual dispatch selects
+another branch. The sync Action expects a local `main` branch before fetching;
+without that explicit checkout, `git checkout main` can interpret this
+repository's `main/` directory as a path instead of switching branches.
+
+When upgrading an Action, verify the release and full commit SHA from the official repository and update the inline version comment.

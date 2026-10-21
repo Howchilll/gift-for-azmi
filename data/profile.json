@@ -1,0 +1,142 @@
+{
+  "name": "Dr. Azmi Bin Mohd Yusof",
+  "title": "Senior Lecturer",
+  "institution": "Xiamen University Malaysia",
+  "tags": ["XR", "VR", "MR", "AR"],
+  "email": "azmi.mohdyusof@xmu.edu.my",
+  "office": "A1#348",
+  "profileUrl": "https://www.xmu.edu.my/staff/dr-azmi-bin-mohd-yusof",
+
+  "journeyPages": [
+    {
+      "title": "EDUCATION",
+      "items": [
+        { "period": "2013", "line1": "PhD, HCI & 3D Modelling", "line2": "Univ. of Waikato, NZ" },
+        { "period": "1988-86", "line1": "MSc & BSc, Comp. Sci.", "line2": "W. Michigan, USA" }
+      ]
+    },
+    {
+      "title": "APPOINTMENTS",
+      "items": [
+        { "period": "2025", "line1": "Senior Lecturer", "line2": "Xiamen Univ., Malaysia" },
+        { "period": "2000-25", "line1": "Principal Lecturer", "line2": "UTN, Malaysia" }
+      ]
+    },
+    {
+      "title": "EARLY CAREER",
+      "items": [
+        { "period": "1991-2013", "line1": "System Developer", "line2": "Freelance, MY" },
+        { "period": "1990-2000", "line1": "Asst. Manager, IT Dept.", "line2": "Sony TV Industries" }
+      ]
+    },
+    {
+      "title": "FOUNDATION",
+      "items": [
+        { "period": "1988-89", "line1": "Programmer", "line2": "Datex Micro Computer, USA" },
+        { "period": "1986-87", "line1": "System Developer", "line2": "Univ. Hospital, MI" }
+      ]
+    }
+  ],
+
+  "researchPages": [
+    {
+      "title": "FOCUS AREAS",
+      "items": [
+        { "period": "XR", "line1": "Extended Reality", "line2": "Education & Healthcare" },
+        { "period": "VR", "line1": "Stress Therapy", "line2": "Immersive intervention" }
+      ]
+    },
+    {
+      "title": "ENERGY TRAINING",
+      "items": [
+        { "period": "2018-19", "line1": "MR for Power Station", "line2": "Operator training" },
+        { "period": "2018-19", "line1": "VR Training of Gas", "line2": "Turbine for TNB" }
+      ]
+    },
+    {
+      "title": "STRESS THERAPY",
+      "items": [
+        { "period": "2014-16", "line1": "Stress Therapy in VR", "line2": "PhD research, ITEX Gold" },
+        { "period": "2019", "line1": "VR Therapy Innovation", "line2": "TNB Fund, 1st Prize" }
+      ]
+    },
+    {
+      "title": "VR FOR LEARNING",
+      "items": [
+        { "period": "2020-21", "line1": "VR for TVET", "line2": "Maintenance training" },
+        { "period": "2022-23", "line1": "Cycling in VR", "line2": "Motion platform, Silver" }
+      ]
+    }
+  ],
+
+  "awardsPages": [
+    {
+      "title": "GOLD",
+      "items": [
+        { "period": "2019", "line1": "ITEX Gold", "line2": "VRTurbine Education 4.0" },
+        { "period": "2018", "line1": "PERINTIS Gold", "line2": "VRTurbine" }
+      ]
+    },
+    {
+      "title": "GOLD 2",
+      "items": [
+        { "period": "2014", "line1": "ITEX Gold", "line2": "Stress Treatment, VR" },
+        { "period": "2015", "line1": "TNB First Prize", "line2": "Open Innovation" }
+      ]
+    },
+    {
+      "title": "SILVER",
+      "items": [
+        { "period": "2023", "line1": "PENCIPTA Silver", "line2": "Immersive Bicycle" }
+      ]
+    }
+  ],
+
+  "impactPages": [
+    {
+      "title": "RESEARCH IMPACT",
+      "items": [
+        { "period": "STRESS", "line1": "VR therapy for anxiety", "line2": "Clinical pilot, MY" },
+        { "period": "TRAINING", "line1": "Operator training", "line2": "Power utility sector" }
+      ]
+    },
+    {
+      "title": "EDUCATION",
+      "items": [
+        { "period": "TVET", "line1": "Maintenance skills", "line2": "VR-based curriculum" },
+        { "period": "TERTIARY", "line1": "HCI & 3D modelling", "line2": "Postgrad supervision" }
+      ]
+    },
+    {
+      "title": "SCOPE",
+      "items": [
+        { "period": "XR", "line1": "Education 4.0", "line2": "Immersive curriculum" },
+        { "period": "HEALTH", "line1": "Clinical therapy", "line2": "Mental wellbeing" }
+      ]
+    }
+  ],
+
+  "teachingPages": [
+    {
+      "title": "COURSES",
+      "items": [
+        { "period": "HCI", "line1": "Human-Computer Interaction", "line2": "Postgraduate" },
+        { "period": "3D", "line1": "3D Modelling & Animation", "line2": "Undergraduate" }
+      ]
+    },
+    {
+      "title": "TEACHING",
+      "items": [
+        { "period": "VR", "line1": "Virtual Reality Lab", "line2": "Hands-on studio" },
+        { "period": "TECH", "line1": "Emerging Technology", "line2": "Industry-facing" }
+      ]
+    },
+    {
+      "title": "SUPERVISION",
+      "items": [
+        { "period": "PG", "line1": "Postgraduate research", "line2": "XR & HCI topics" },
+        { "period": "UG", "line1": "Final-year projects", "line2": "VR applications" }
+      ]
+    }
+  ]
+}
