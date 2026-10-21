@@ -51,7 +51,7 @@ FoloToy AI Passport：**ESP32-C3、8 MB Flash、无 PSRAM、240 × 320 彩色屏
 生成的 C 头文件已随源码提供；不修改资源直接编译，无需 Pillow 或在线图像服务。
 
 ```bash
-git clone YOUR_REPOSITORY_URL gift-for-azmi
+git clone https://github.com/Howchilll/gift-for-azmi.git
 cd gift-for-azmi
 idf.py --version
 ```

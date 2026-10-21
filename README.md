@@ -57,7 +57,7 @@ in its root folder. The generated C headers are committed, so an unchanged
 firmware build does not need Pillow or a network image service.
 
 ```bash
-git clone YOUR_REPOSITORY_URL gift-for-azmi
+git clone https://github.com/Howchilll/gift-for-azmi.git
 cd gift-for-azmi
 idf.py --version
 ```
